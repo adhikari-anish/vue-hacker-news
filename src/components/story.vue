@@ -40,6 +40,7 @@ export default {
   name: "story",
   created: function () {
     getStory(this.id).then((res) => {
+      console.log(res);
       this.story = res;
       this.storyTime = new Date(res.time) * 1000;
     });

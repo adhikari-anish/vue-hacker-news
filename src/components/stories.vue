@@ -16,7 +16,9 @@ import Story from "@/components/story.vue";
 export default {
   name: "stories",
   created: function () {
-    getStories().then((id) => (this.storyIds = id.slice(0, 20)));
+    getStories().then((id) => {
+      console.log(id);
+      (this.storyIds = id.slice(0, 20))});
   },
   data: function () {
     return {
